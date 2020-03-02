@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css?family=Acme&display=swap");
+.mainHeader {
+  height: 80px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 2px 2px 4px #999;
+  position: fixed;
+  z-index: 9;
+}
+
+.headerDiv {
+  width: 95%;
+  height: 100%;
+  /* background-color: orange; */
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.leftHeader {
+  width: 40%;
+  height: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Acme;
+  color: #3f0d40;
+  text-shadow: 1px 2px 3px #ccc;
+}
+
+.rightHeader {
+  width: 60%;
+  height: 100%;
+  /* background-color: #ccc; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.headerLogo {
+  height: 70%;
+  margin-left: 20px;
+}
+
+.rightHeader span {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  height: 30px;
+
+  text-shadow: 1px 1px 2px #999;
+}
+
+.rightHeader span:hover {
+  border-bottom: 2px solid #999;
+}
+
+.rightHeader a {
+  text-decoration: none;
+}
+
+.rightHeader a:focus {
+  color: #a744a8;
+}
