@@ -38,19 +38,19 @@ export default function About(props) {
               <div className="goal first">
                 <span>Our Promise</span>
                 <div>
-                &emsp;We help transform a student developer into Junior Developers.
+                &emsp;<b>✓</b>&nbsp;We help transform a student developer into Junior Developers.
                 </div>
               </div>
               <div className="goal second">
                 <span>Our Essence</span>
                 <div>
-                &emsp;We introduce on trend technologies used in the field of web development.
+                &emsp;<b>✓</b>&nbsp;We introduce on trend technologies used in the field of web development.
                 </div>
               </div>
               <div className="goal thrid">
                 <span>Our Vibe</span>
                 <div>
-                &emsp;We bring out the best of our students.
+                &emsp;<b>✓</b>&nbsp;We bring out the best of our students.
                 </div>
               </div>
             </div>
