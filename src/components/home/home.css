@@ -74,6 +74,8 @@
   text-shadow: 1px 2px 3px #666;
   justify-content: center;
   align-items: center;
+  word-spacing: 1px;
+  text-align: center;
 }
 
 .innerBtnDiv {
@@ -109,13 +111,13 @@
 
 @media (max-width: 1150px) {
   .innerSign {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
 }
 
 @media (max-width: 770px) {
   .innerSign {
-    font-size: 1.2vw;
+    font-size: 1.7vw;
   }
 }
 
@@ -131,10 +133,6 @@
     font-size: 10vw;
   }
 
-  .innerSign {
-    /* background-color: red; */
-  }
-
   .innerGif {
     display: none;
   }
@@ -145,7 +143,7 @@
   }
 
   .innerSign {
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     transform: scaleY(1.4);
   }
 }

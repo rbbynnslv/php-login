@@ -1,4 +1,138 @@
 .mainAbout {
-  height: 100vh;
-  background-color: red;
+  height: auto;
+  /* background-color: #C6EAFF; */
+  position: relative;
+  overflow: hidden;
+}
+.mainAbout:after {
+  display: block;
+  /* border-radius: 100% 50%; */
+  /* height: 100%; */
+  z-index: -11;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 490px;
+  background-color: #c6eaff;
+  transform: skew(-50deg);
+  transform-origin: top;
+}
+.mainAbout:before {
+  display: block;
+  content: "";
+  position: absolute;
+  /* height: 10px; */
+  z-index: -11;
+  top: 0%;
+  bottom: 0%;
+  left: 135%;
+  right: 0%;
+  width: 700px;
+  background-color: #c6eaff;
+  transform: skew(-50deg);
+  transform-origin: top;
+}
+
+@media screen and (max-width: 1400px) {
+  .mainAbout:before {
+    display: block;
+    content: "";
+    position: absolute;
+    /* height: 10px; */
+    z-index: -11;
+    top: 0%;
+    left: 170%;
+    bottom: 0%;
+    width: 500px;
+    background-color: #c6eaff;
+    transform: skew(-50deg);
+    transform-origin: top;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mainAbout:before {
+    display: none;
+  }
+}
+
+.header {
+  padding: 83px 80px 5px 80px;
+}
+.title {
+  text-align: center;
+  font-size: 30px;
+  font-family: Acme;
+  text-shadow: 1px 2px 3px #999;
+  /* border: solid 1px; */
+}
+.title-text {
+  /* border: solid 1px; */
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  line-height: 1.9;
+}
+
+.one {
+  margin: 0 auto;
+  width: 90%;
+}
+.two {
+  /* border: solid 1px; */
+  margin: 0 auto;
+  width: 70%;
+}
+.body {
+  margin-top: 20px;
+}
+
+.body-wrapper {
+  /* border: solid 1px red; */
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .body-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.wrapper {
+  /* border: solid 1px blue; */
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.goals-wrapper {
+  /* border: solid 1px; */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+}
+.body-img img {
+  height: 300px;
+  width: 500px;
+}
+.goal {
+  margin: 9px;
+  font-size: 13px;
+}
+.goal span {
+  font-size: 17px;
+  line-height: 2;
+  font-style: italic;
+}
+.goal b {
+  font-size: 20px;
+  color: green;
 }

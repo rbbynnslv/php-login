@@ -26,8 +26,10 @@ export default function Home(props) {
           <div className="innerBorder"></div>
           <div className="innerBottom">
             <div className="innerSign">
-              You can access the course material by logging in with your &nbsp;
-              <i>@boom.camp</i> &nbsp; google account
+              <p>
+                You can access the course material by logging in with your
+                &nbsp;<i>@boom.camp</i>&nbsp; google account
+              </p>
             </div>
             <div className="innerBtnDiv">
               <button className="innerBtn">Get Started</button>
