@@ -17,7 +17,7 @@ export default function About(props) {
   return (
     <div ref={about} className="mainAbout">
       <div className="header">
-        <div className="title one">Why Boom.Camp?</div>
+        <div className="title one">Why Boom Camp?</div>
         <div className="title-text one">
           The idea of Boom.Camp was born out of the struggle of it's parent
           company{" "}
