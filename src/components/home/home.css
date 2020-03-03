@@ -39,7 +39,7 @@
 }
 
 .innerTitle {
-  font-size: 7em;
+  font-size: 7vw;
   font-family: Acme;
   letter-spacing: 5px;
   color: #444;
@@ -103,4 +103,52 @@
 .innerBtn:hover {
   transition: 0.7s;
   background-color: #d459d6;
+}
+
+/* Responsiveness -------------------------- */
+
+@media (max-width: 1150px) {
+  .innerSign {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 770px) {
+  .innerSign {
+    font-size: 1.2vw;
+  }
+}
+
+@media (max-width: 630px) {
+  .mainDiv {
+    height: 700px;
+  }
+
+  .mainInner {
+    height: 400px;
+  }
+  .innerTitle {
+    font-size: 10vw;
+  }
+
+  .innerSign {
+    /* background-color: red; */
+  }
+
+  .innerGif {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  .innerBtn {
+    width: 90%;
+  }
+
+  .innerSign {
+    font-size: 1.2vw;
+    transform: scaleY(1.4);
+  }
+}
+
+@media (max-width: 400px) {
 }

@@ -396,8 +396,8 @@
   }
 
   .teamTop::before {
-    bottom: 230px;
-    height: 5%;
+    bottom: 40px;
+    height: 15%;
   }
 
   .teamBottom {
@@ -410,6 +410,11 @@
 @media (max-width: 509px) {
   .teamTop {
     font-size: 16px;
+  }
+  .teamTop::before {
+    width: 70%;
+    height: 15%;
+    bottom: 45px;
   }
 }
 
