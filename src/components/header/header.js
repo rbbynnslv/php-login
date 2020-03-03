@@ -7,12 +7,14 @@ export default function Header(props) {
     <div className="mainHeader">
       <div className="headerDiv">
         <div className="leftHeader">
-          <span>Boom Camp</span>
+          <a target="_blank" href="https://boom.camp">
+            Boom Camp
+          </a>
           <img src={Logo} className="headerLogo" />
         </div>
         <div className="rightHeader">
           <span onClick={() => props.handleProps("#home")}>
-            <a href="#">Home</a>
+            <a href="#home">Home</a>
           </span>
           <span onClick={() => props.handleProps("#about")}>
             <a href="#about">About us</a>

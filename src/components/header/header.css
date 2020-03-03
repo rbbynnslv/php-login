@@ -3,7 +3,7 @@
   height: 80px;
   width: 100%;
   background-color: #fff;
-  box-shadow: 2px 2px 4px #999;
+  box-shadow: 2px 2px 40px #999;
   position: fixed;
   z-index: 9;
 }
@@ -30,6 +30,12 @@
   text-shadow: 1px 2px 3px #ccc;
 }
 
+.leftHeader a,
+.leftHeader a:hover {
+  text-decoration: none;
+  color: #3f0d40;
+}
+
 .rightHeader {
   width: 60%;
   height: 100%;
@@ -48,19 +54,38 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 18px;
-  height: 30px;
-
+  height: 35px;
+  /* background-color: red; */
   text-shadow: 1px 1px 2px #999;
 }
 
-.rightHeader span:hover {
-  border-bottom: 2px solid #999;
-}
-
-.rightHeader a {
+.rightHeader span > a {
   text-decoration: none;
+  color: #333;
 }
 
-.rightHeader a:focus {
+.rightHeader span > a:before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 5px;
+  bottom: 10px;
+  background: #a744a8;
+  visibility: visible;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: 0.25s linear;
+}
+
+.rightHeader a:hover,
+.rightHeader a:focus,
+.rightHeader span:hover,
+.rightHeader span:focus {
   color: #a744a8;
+}
+
+.rightHeader span > a:hover:before,
+.rightHeader span > a:focus:before {
+  visibility: visible;
+  transform: scaleX(1);
 }

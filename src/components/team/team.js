@@ -41,7 +41,7 @@ const skills = [
 ];
 
 const Gallery = () => {
-  const handleOnDragStart = e => e.preventDefault();
+  // const handleOnDragStart = e => e.preventDefault();
   return (
     <AliceCarousel
       buttonsDisabled
@@ -50,10 +50,16 @@ const Gallery = () => {
       autoPlay
       autoPlayInterval={1500}
       infinite
-      responsive={{ 0: { items: 5 } }}
+      responsive={{
+        1024: { items: 5 },
+        1: { items: 4 },
+        2: { items: 3 },
+        3: { items: 2 },
+        0: { items: 1 }
+      }}
     >
-      {skills.map(item => (
-        <div className="carouselItem">
+      {skills.map((item, i) => (
+        <div key={i} className="carouselItem">
           <img className="carouselImg" src={item} />
         </div>
       ))}
@@ -64,6 +70,7 @@ const Gallery = () => {
 export default function Team(props) {
   const team = useRef(null);
   const [select, setSelect] = useState("");
+
   const scrollNow = () => {
     team.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -75,38 +82,42 @@ export default function Team(props) {
   });
   return (
     <div ref={team} className="mainTeam">
-      <div className="teamTop">
-        Meet the instructors and mentors of this course
-      </div>
-      <div className="teamBody">
-        {teams.map(item => (
-          <div
-            onClick={() => setSelect(item.name)}
-            className={
-              item.key === 0 || item.key === 2
-                ? "card sm teams"
-                : "card lg teams"
-            }
-          >
-            <div class="overlay"></div>
-            <div class="circle">
-              <img className="cardImg" src={item.img} />
-            </div>
-            <span className="teamName">{item.name}</span>
-            <span className="teamRole">{item.role}</span>
-          </div>
-        ))}
-      </div>
-      <div
-        className="teamBottom"
-        style={{ display: select === "" ? "none" : "block" }}
-      >
-        <div className="teamBottom-title">
-          <span className="bottomName">{select}</span>
-          <i className="bottomTxt">"Primary technologies & skills"</i>
+      <div className="teamInner">
+        <div className="teamTop">
+          Meet the instructors and mentors of this course
         </div>
-        <div className="teamBottom-carousel">{<Gallery />}</div>
+        <div className="teamBody">
+          {teams.map(item => (
+            <div
+              key={item.key}
+              onClick={() => setSelect(item.name)}
+              className={
+                item.key === 0 || item.key === 2
+                  ? "card sm teams"
+                  : "card lg teams"
+              }
+            >
+              <div className="overlay"></div>
+              <div className="circle">
+                <img className="cardImg" src={item.img} />
+              </div>
+              <span className="teamName">{item.name}</span>
+              <span className="teamRole">{item.role}</span>
+            </div>
+          ))}
+        </div>
+        <div
+          className="teamBottom"
+          style={{ display: select === "" ? "none" : "block" }}
+        >
+          <div className="teamBottom-title">
+            <span className="bottomName">{select}</span>
+            <i className="bottomTxt">"Primary technologies & skills"</i>
+          </div>
+          <div className="teamBottom-carousel">{<Gallery />}</div>
+        </div>
       </div>
+      <div className="mainTeam-img"></div>
     </div>
   );
 }
