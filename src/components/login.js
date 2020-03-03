@@ -4,14 +4,15 @@ import Header from "./header/header";
 import About from "./about/about";
 import Team from "./team/team";
 import Related from "./related/related";
+import Footer from "./footer/footer";
 
 import { Tooltip } from "antd";
 import { Fab, Icon } from "@material-ui/core";
 
 const topIcon = {
   position: "fixed",
-  bottom: "10px",
-  right: "10px"
+  bottom: "20px",
+  right: "20px"
 };
 
 export default function Login() {
@@ -31,6 +32,7 @@ export default function Login() {
       <About props={page} />
       <Team props={page} />
       <Related props={page} />
+      <Footer />
       <Tooltip title="Back to top" placement="left">
         <Fab onClick={() => scrollNow()} style={topIcon} color="primary">
           <Icon>arrow_upward</Icon>
