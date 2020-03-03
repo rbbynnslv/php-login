@@ -12,7 +12,8 @@ import { Fab, Icon } from "@material-ui/core";
 const topIcon = {
   position: "fixed",
   bottom: "20px",
-  right: "20px"
+  right: "20px",
+  zIndex: "99"
 };
 
 export default function Login() {
@@ -22,8 +23,6 @@ export default function Login() {
   const scrollNow = () => {
     head.current.scrollIntoView({ behavior: "smooth" });
   };
-
-  // useEffect(() => )
 
   return (
     <div ref={head}>
