@@ -168,5 +168,11 @@
     font-size : 12px;
     text-align: center;
     padding: 0;
+    border: solid 1px;
+  }
+}
+@media screen and (max-width: 444px) {
+  .goal {
+    width: 300px;
   }
 }
