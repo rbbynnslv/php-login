@@ -2,6 +2,9 @@
   height: auto;
   position: relative;
   overflow: hidden;
+  padding-bottom: 150px;
+  z-index: 1;
+  background-color: #fff;
 }
 .mainAbout:after {
   display: block;
@@ -12,9 +15,9 @@
   bottom: 0;
   left: 0;
   width: 490px;
-  background-color: #C6EAFF;
+  background-color: #c6eaff;
   transform: skew(-50deg);
-  transform-origin:top;
+  transform-origin: top;
 }
 .mainAbout:before {
   display: block;
@@ -23,12 +26,12 @@
   z-index: -11;
   top: 0%;
   bottom: 0%;
-  left: 135%;
+  left: 145%;
   right: 0%;
   width: 700px;
-  background-color: #C6EAFF;
+  background-color: #c6eaff;
   transform: skew(-50deg);
-  transform-origin:top;
+  transform-origin: top;
 }
 
 @media screen and (max-width: 1400px) {
@@ -41,9 +44,9 @@
     left: 170%;
     bottom: 0%;
     width: 500px;
-    background-color: #C6EAFF;
+    background-color: #c6eaff;
     transform: skew(-50deg);
-    transform-origin:top;
+    transform-origin: top;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -59,6 +62,7 @@
   text-align: center;
   font-size: 30px;
   font-family: Acme;
+  color: #3f0d40;
   text-shadow: 1px 2px 3px #999;
 }
 .title-text {
@@ -69,8 +73,6 @@
   line-height: 1.9;
 }
 
-
-
 .one {
   margin: 0 auto;
   width: 90%;
@@ -79,7 +81,7 @@
   margin: 0 auto;
   width: 70%;
 }
-.body{
+.body {
   margin-top: 20px;
 }
 
@@ -90,7 +92,6 @@
 }
 
 @media screen and (max-width: 600px) {
-
   .title-text {
     font-size: 12px;
     line-height: 1.1;
@@ -144,7 +145,7 @@
 
 @media screen and (max-width: 600px) {
   .goal {
-    font-size : 12px;
+    font-size: 12px;
     text-align: center;
     padding: 0;
   }

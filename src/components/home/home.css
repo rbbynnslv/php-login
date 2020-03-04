@@ -17,6 +17,8 @@
   background-image: url("./images/bg.svg");
   background-repeat: no-repeat;
   background-position: center;
+  position: fixed;
+  z-index: -3;
   filter: blur(2px);
 }
 
@@ -42,7 +44,7 @@
   font-size: 7vw;
   font-family: Acme;
   letter-spacing: 5px;
-  color: #444;
+  color: #3f0d40;
   font-weight: bold;
   text-shadow: 1px 3px 4px #999;
 }

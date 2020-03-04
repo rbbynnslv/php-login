@@ -12,10 +12,12 @@ export default function Header(props) {
     <div className={height ? "mainHeader collapse" : "mainHeader"}>
       <div className="headerDiv">
         <div className="leftHeader">
-          <a target="_blank" href="https://boom.camp">
-            Boom Camp
-          </a>
-          <img src={Logo} className="headerLogo" />
+          <span className="leftSpan">
+            <a target="_blank" href="https://boom.camp">
+              Boom Camp
+            </a>
+            <img src={Logo} className="headerLogo" />
+          </span>
         </div>
         <div className="rightHeader">
           <span onClick={() => props.handleProps("#home")}>
