@@ -162,12 +162,13 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .mainFooter {
     height: 400px;
   }
 
   .footTop-left {
+    flex-wrap: nowrap;
     flex-direction: column;
   }
 

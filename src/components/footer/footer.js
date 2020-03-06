@@ -7,52 +7,65 @@ import {
   LinkedinFilled,
   TwitterSquareFilled
 } from "@ant-design/icons";
+import { Tooltip } from "antd";
 import "./footer.css";
+import { Redirect } from "react-router-dom";
 
 export default function Footer(props) {
+  const follow = [
+    {
+      tooltip: "Follow us on Facebook",
+      href: "https://www.facebook.com/boomsourcing.school",
+      icon: <FacebookFilled className="footerIcons" />
+    },
+    {
+      tooltip: "Follow us on LinkedIn",
+      href: "https://www.linkedin.com/company/boomsourcing.com/",
+      icon: <LinkedinFilled className="footerIcons" />
+    },
+    {
+      tooltip: "Follow us on Twitter",
+      href: "https://twitter.com/boomsourcing",
+      icon: <TwitterSquareFilled className="footerIcons" />
+    }
+  ];
+
+  const partner = [
+    {
+      href: "https://boomsourcing.com/",
+      src: "https://boomsourcing.com/wp-content/uploads/2019/08/logo.png"
+    },
+    {
+      href: "https://perfectpitchtech.com/",
+      src:
+        "https://perfectpitchtech.com/wp-content/uploads/2019/04/cropped-1.png"
+    },
+    {
+      href: "https://boom.camp",
+      src: BoomCamp
+    },
+    {
+      href: "https://boomdemand.com/",
+      src: "https://boom.camp/wp-content/uploads/2019/04/c1-1.png"
+    }
+  ];
+
   return (
     <React.Fragment>
       <div className="mainDivFooter">
         <div className="mainFooter">
           <div className="footerTop">
             <div className="footTop-left">
-              <a
-                className="footAnchor"
-                target="_blank"
-                href="https://boomsourcing.com/"
-              >
-                <img
-                  className="footImg"
-                  src="https://boomsourcing.com/wp-content/uploads/2019/08/logo.png"
-                />
-              </a>
-              <a
-                className="footAnchor"
-                target="_blank"
-                href="https://perfectpitchtech.com/"
-              >
-                <img
-                  className="footImg"
-                  src="https://perfectpitchtech.com/wp-content/uploads/2019/04/cropped-1.png"
-                />
-              </a>
-              <a
-                className="footAnchor"
-                href="https://boom.camp"
-                target="_blank"
-              >
-                <img className="footImg" src={BoomCamp} />
-              </a>
-              <a
-                className="footAnchor"
-                href="https://boomdemand.com/"
-                target="_blank"
-              >
-                <img
-                  className="footImg"
-                  src="https://boom.camp/wp-content/uploads/2019/04/c1-1.png"
-                />
-              </a>
+              {partner.map((item, i) => (
+                <a
+                  key={i}
+                  className="footAnchor"
+                  target="_blank"
+                  href={item.href}
+                >
+                  <img className="footImg" src={item.src} />
+                </a>
+              ))}
             </div>
             <div className="footTop-right">
               <span className="footerLocation">
@@ -67,27 +80,13 @@ export default function Footer(props) {
               </span>
 
               <span className="footerLinks">
-                <a
-                  target="_blank"
-                  href="https://www.facebook.com/boomsourcing.school"
-                >
-                  <span className="footerIcon-span">
-                    <FacebookFilled className="footerIcons" />
-                  </span>
-                </a>
-                <a
-                  target="_blank"
-                  href="https://www.linkedin.com/company/boomsourcing.com/"
-                >
-                  <span className="footerIcon-span">
-                    <LinkedinFilled className="footerIcons" />
-                  </span>
-                </a>
-                <a target="_blank" href="https://twitter.com/boomsourcing">
-                  <span className="footerIcon-span">
-                    <TwitterSquareFilled className="footerIcons" />
-                  </span>
-                </a>
+                {follow.map((item, i) => (
+                  <Tooltip key={i} placement="bottom" title={item.tooltip}>
+                    <a target="_blank" href={item.href}>
+                      <span className="footerIcon-span">{item.icon}</span>
+                    </a>
+                  </Tooltip>
+                ))}
               </span>
             </div>
           </div>
