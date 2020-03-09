@@ -14,6 +14,10 @@ export default function About(props) {
       scrollNow();
     }
   });
+
+  // const handleScroll = e => {
+  //   console.log(e);
+  // };
   return (
     <div ref={about} className="mainAbout">
       <div className="header">

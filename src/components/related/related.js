@@ -45,6 +45,7 @@ export default function Related(props) {
   });
 
   const readMore = e => {
+    // console.log(e);
     setClassTop("descTop");
     setClassBottom("descBottom-span");
     setOpenDesc(true);
@@ -87,7 +88,7 @@ export default function Related(props) {
         <div className="lineDivider"></div>
         <div
           className="relatedBottom"
-          style={{ display: openDesc ? "flex" : "none" }}
+          style={{ visibility: openDesc ? "visible" : "hidden" }}
         >
           <div className="relBottom-left">
             <div className="relBottom-img"></div>
@@ -101,7 +102,7 @@ export default function Related(props) {
             </div>
           </div>
           <div className="relBottom-right" ref={body}>
-            <Carousel />
+            <Carousel open={select} />
           </div>
         </div>
       </div>

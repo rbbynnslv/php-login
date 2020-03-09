@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { Icon } from "@material-ui/core";
@@ -9,14 +9,45 @@ import Team1 from "./images/Team1.jpg";
 import Team2 from "./images/Team2.jpg";
 import Team3 from "./images/Team3.jpg";
 import Team4 from "./images/Team4.jpg";
+import Team1_handraiser from "./images/handraiser-team1.png";
+import Team2_handraiser from "./images/handraiser-team2.png";
+import Team3_handraiser from "./images/handraiser-team3.png";
+import Team4_handraiser from "./images/handraiser-team4.png";
+import Partner1 from "./images/partners1.png";
+import Partner2 from "./images/partners2.png";
+import Partner3 from "./images/partners3.png";
+import Partner4 from "./images/partners4.png";
+import Partner5 from "./images/partners5.png";
 
 export default class Gallery extends React.Component {
-  items = [Batch1, Batch2, Team1, Team2, Team3, Team4];
+  items = {
+    frontend: [
+      { img: Batch1, desc: "Batch 1 Frontend Course" },
+      { img: Batch2, desc: "Batch 2 Frontend Course" },
+      { img: Team1, desc: "Team 1 of batch 2 presented their project" },
+      { img: Team2, desc: "Team 2 of batch 2 presented their project" },
+      { img: Team3, desc: "Team 3 of batch 2 presented their project" },
+      { img: Team4, desc: "Team 4 of batch 2 presented their project" }
+    ],
+    handraiser: [
+      { img: Team1_handraiser, desc: "Batch 2 team 1 handraiser" },
+      { img: Team2_handraiser, desc: "Batch 2 team 2 handraiser" },
+      { img: Team3_handraiser, desc: "Batch 2 team 3 handraiser" },
+      { img: Team4_handraiser, desc: "Batch 2 team 4 handraiser" }
+    ],
+    dev_partners: [
+      { img: Partner1, desc: "" },
+      { img: Partner2, desc: "" },
+      { img: Partner3, desc: "" },
+      { img: Partner4, desc: "" },
+      { img: Partner5, desc: "" }
+    ]
+  };
 
   state = {
     currentIndex: 0,
     responsive: { 1024: { items: 1 } },
-    galleryItems: this.galleryItems()
+    galleryItems: null
   };
 
   slideTo = i => this.setState({ currentIndex: i });
@@ -31,16 +62,41 @@ export default class Gallery extends React.Component {
 
   thumbItem = (item, i) => (
     <span key={i} onClick={() => this.slideTo(i)}>
-      <img src={item} className="thumb" />
+      <img src={item.img} className="thumb" />
     </span>
   );
 
-  galleryItems() {
-    return this.items.map((item, i) => (
-      <div className="galleryDiv">
-        <img key={i} src={item} className="galleryItem" />
-      </div>
-    ));
+  componentDidUpdate(prevProps) {
+    if (this.props !== prevProps) {
+      const e = this.props.open.name;
+
+      e === "Frontend Course"
+        ? this.setState({
+            galleryItems: this.items.frontend.map((item, i) => (
+              <div className="galleryDiv">
+                <img key={i} src={item.img} className="galleryItem" />
+                <span className="galleryTxt">{item.desc}</span>
+              </div>
+            ))
+          })
+        : e === "Handraiser"
+        ? this.setState({
+            galleryItems: this.items.handraiser.map((item, i) => (
+              <div className="galleryDiv">
+                <img key={i} src={item.img} className="galleryItem" />
+                <span className="galleryTxt">{item.desc}</span>
+              </div>
+            ))
+          })
+        : this.setState({
+            galleryItems: this.items.dev_partners.map((item, i) => (
+              <div className="galleryDiv">
+                <img key={i} src={item.img} className="galleryItem" />
+                <span className="galleryTxt">{item.desc}</span>
+              </div>
+            ))
+          });
+    }
   }
 
   render() {
@@ -50,7 +106,7 @@ export default class Gallery extends React.Component {
         <AliceCarousel
           dotsDisabled={true}
           buttonsDisabled={true}
-          items={galleryItems}
+          items={galleryItems ? galleryItems : []}
           responsive={responsive}
           slideToIndex={currentIndex}
           fadeOutAnimation
@@ -60,7 +116,13 @@ export default class Gallery extends React.Component {
           onSlideChanged={this.onSlideChanged}
         />
 
-        <div className="carouselNav">{this.items.map(this.thumbItem)}</div>
+        <div className="carouselNav">
+          {this.props.open.name === "Frontend Course"
+            ? this.items.frontend.map(this.thumbItem)
+            : this.props.open.name === "Handraiser"
+            ? this.items.handraiser.map(this.thumbItem)
+            : this.items.dev_partners.map(this.thumbItem)}
+        </div>
         <div className="carouselBtns">
           <button className="carouselBtn" onClick={() => this.slidePrev()}>
             <Icon>arrow_back</Icon>

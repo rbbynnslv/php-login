@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./header.css";
 import Logo from "./images/logo-boom.png";
 import { Collapse, List } from "antd";
@@ -20,17 +20,25 @@ export default function Header(props) {
           </span>
         </div>
         <div className="rightHeader">
-          <span onClick={() => props.handleProps("#home")}>
-            <a href="#home">Home</a>
+          <span>
+            <a href="#home" onClick={() => props.handleProps("#home")}>
+              Home
+            </a>
           </span>
-          <span onClick={() => props.handleProps("#about")}>
-            <a href="#about">About us</a>
+          <span>
+            <a href="#about" onClick={() => props.handleProps("#about")}>
+              About us
+            </a>
           </span>
-          <span onClick={() => props.handleProps("#team")}>
-            <a href="#team">Our Team</a>
+          <span>
+            <a href="#team" onClick={() => props.handleProps("#team")}>
+              Our Team
+            </a>
           </span>
-          <span onClick={() => props.handleProps("#related")}>
-            <a href="#related">Related</a>
+          <span>
+            <a href="#related" onClick={() => props.handleProps("#related")}>
+              Related
+            </a>
           </span>
         </div>
         <div className="rightHeader-toggle">

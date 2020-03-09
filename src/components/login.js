@@ -6,19 +6,23 @@ import Team from "./team/team";
 import Related from "./related/related";
 import Footer from "./footer/footer";
 
-import { Tooltip } from "antd";
-import { Fab, Icon } from "@material-ui/core";
-
-const topIcon = {
-  position: "fixed",
-  bottom: "20px",
-  right: "20px",
-  zIndex: "99"
-};
-
-export default function Login() {
+export default function Login(props) {
+  const [page, setPage] = useState();
   const head = useRef(null);
-  const [page, setPage] = useState("");
+
+  const toTop = () => {
+    setPage("#head");
+  };
+
+  // useEffect(() => {
+  //   console.log(page);
+  // });
+
+  useEffect(() => {
+    if (props.props === "#head") {
+      scrollNow();
+    }
+  });
 
   const scrollNow = () => {
     head.current.scrollIntoView({ behavior: "smooth" });
@@ -26,17 +30,12 @@ export default function Login() {
 
   return (
     <div ref={head}>
-      <Header handleProps={e => setPage(e)} />
+      <Header props={page} handleProps={e => setPage(e)} />
       <Home props={page} />
       <About props={page} />
       <Team props={page} />
       <Related props={page} />
-      <Footer />
-      <Tooltip title="Back to top" placement="left">
-        <Fab onClick={() => scrollNow()} style={topIcon} color="primary">
-          <Icon>arrow_upward</Icon>
-        </Fab>
-      </Tooltip>
+      <Footer props={e => toTop()} />
     </div>
   );
 }

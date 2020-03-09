@@ -253,16 +253,34 @@
 }
 
 .galleryDiv {
-  width: 100%;
+  width: 65vw;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  /* z-index: -2; */
+  /* background-color: yellow; */
 }
 
 .galleryItem {
   width: 800px;
   height: 460px;
   border-radius: 5px;
+
+  /* z-index: 20; */
+  /* background-color: red; */
+}
+
+.galleryTxt {
+  position: absolute;
+  bottom: 17px;
+  font-size: 1.6em;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  word-spacing: 2px;
+  color: #eae9f8;
+  text-shadow: 2px 2px 4px #111;
 }
 
 .thumb {

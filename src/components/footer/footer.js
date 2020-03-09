@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import BoomCamp from "./images/boom-camp.png";
 import {
@@ -9,9 +9,10 @@ import {
 } from "@ant-design/icons";
 import { Tooltip } from "antd";
 import "./footer.css";
-import { Redirect } from "react-router-dom";
+import { Fab, Icon } from "@material-ui/core";
 
 export default function Footer(props) {
+  const head = useRef(null);
   const follow = [
     {
       tooltip: "Follow us on Facebook",
@@ -49,6 +50,10 @@ export default function Footer(props) {
       src: "https://boom.camp/wp-content/uploads/2019/04/c1-1.png"
     }
   ];
+
+  const handleClick = () => {
+    props.props();
+  };
 
   return (
     <React.Fragment>
@@ -94,14 +99,29 @@ export default function Footer(props) {
             <span>Boom Camp 2020 &copy; All Rights Reserved</span> |
             <a target="_blank" href="https://boomsourcing.com/privacy-policy/">
               Privacy Policy
-            </a>{" "}
-            |{" "}
+            </a>
+            |
             <a
               target="_blank"
               href="https://boomsourcing.com/declaration-cookies/"
             >
               Cookie Policy
             </a>
+            <Tooltip title="Back to top" placement="left">
+              <Fab
+                onClick={() => handleClick()}
+                color="primary"
+                size="small"
+                style={{
+                  position: "absolute",
+                  bottom: "15px",
+                  right: "20px",
+                  zIndex: "99"
+                }}
+              >
+                <Icon>arrow_upward</Icon>
+              </Fab>
+            </Tooltip>
           </div>
         </div>
       </div>
