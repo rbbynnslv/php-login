@@ -61,11 +61,8 @@ export default function Related(props) {
 
   return (
     <div ref={related} className="mainRelated">
-      <div className="relatedTitle">
-        Other courses and projects
-        {/* <span className="lineTitle"></span> */}
-      </div>
-      <div className="relatedBody" ref={body}>
+      <div className="relatedTitle">Other courses and projects</div>
+      <div className="relatedBody">
         <div className="relatedTop">
           <div className="relTop-body">
             {images.map((item, i) => (
@@ -85,7 +82,6 @@ export default function Related(props) {
             ))}
           </div>
         </div>
-        <div className="lineDivider"></div>
         <div
           className="relatedBottom"
           style={{ visibility: openDesc ? "visible" : "hidden" }}
@@ -101,9 +97,10 @@ export default function Related(props) {
               </div>
             </div>
           </div>
-          <div className="relBottom-right" ref={body}>
+          <div className="relBottom-right">
             <Carousel open={select} />
           </div>
+          <span ref={body}></span>
         </div>
       </div>
     </div>

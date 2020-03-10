@@ -51,11 +51,10 @@ const Gallery = () => {
       autoPlayInterval={1500}
       infinite
       responsive={{
-        1024: { items: 5 },
-        1: { items: 4 },
-        2: { items: 3 },
-        3: { items: 2 },
-        0: { items: 1 }
+        1159: { items: 5 },
+        1000: { items: 4 },
+        700: { items: 3 },
+        420: { items: 2 }
       }}
     >
       {skills.map((item, i) => (
@@ -117,7 +116,7 @@ export default function Team(props) {
           <div className="teamBottom-carousel">{<Gallery />}</div>
         </div>
       </div>
-      <div className="mainTeam-img"></div>
+      {/* <div className="mainTeam-img"></div> */}
     </div>
   );
 }

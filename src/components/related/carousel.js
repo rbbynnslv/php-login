@@ -104,8 +104,8 @@ export default class Gallery extends React.Component {
     return (
       <div className="mainCarousel">
         <AliceCarousel
-          dotsDisabled={true}
-          buttonsDisabled={true}
+          dotsDisabled
+          buttonsDisabled
           items={galleryItems ? galleryItems : []}
           responsive={responsive}
           slideToIndex={currentIndex}

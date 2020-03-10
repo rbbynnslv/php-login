@@ -4,19 +4,22 @@ import Php from "./images/img.gif";
 
 export default function Home(props) {
   const home = useRef(null);
+  const head = useRef(null);
+
   const scrollNow = () => {
     home.current.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
     // console.log(props);
-    if (props.props === "#home") {
+    if (props.props === "#home" || props.props === "#head") {
       scrollNow();
     }
   });
 
   return (
     <React.Fragment>
+      <span ref={head}></span>
       <div className="mainDiv" ref={home}>
         <div className="mainInner">
           <div className="innerTop">
