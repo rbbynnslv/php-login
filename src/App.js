@@ -1,11 +1,10 @@
-import React from "react";
-import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Login from "./components/login";
-import "antd/dist/antd.css";
-import "react-alice-carousel/lib/alice-carousel.css";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Login from './components/login';
+import 'antd/dist/antd.css';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
-function App() {
+export default function App() {
   return (
     <Router>
       <Switch>
@@ -14,5 +13,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;

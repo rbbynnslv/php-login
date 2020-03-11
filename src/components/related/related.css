@@ -1,7 +1,7 @@
 .mainRelated {
   height: 1300px;
   width: 100%;
-  background-color: mintcream;
+  background-color: #f1f1f1;
   z-index: 1;
   /* background-color: red; */
 }
@@ -23,12 +23,12 @@
   transform: scaleY(1.3);
 }
 .relatedTitle::before {
-  content: "";
+  content: ;
   position: absolute;
   z-index: -1;
   width: 40%;
   height: 15%;
-  bottom: 90px;
+  bottom: 85px;
   opacity: 0.3;
   border-radius: 0px 20px 0px 20px;
   background: #6265fe;
@@ -138,11 +138,9 @@
 }
 
 .relatedBottom {
-  height: 63%;
+  height: 62%;
   width: 100%;
   /* background-color: red; */
-  background-color: mintcream;
-  padding: 10px 0;
   display: flex;
 }
 
@@ -178,10 +176,7 @@
 .relBottom-right {
   width: 65%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* flex-direction: column; */
+  /* display: flex; */
   /* background-color: #ccc; */
 }
 
@@ -254,9 +249,7 @@
 
 .mainCarousel {
   height: 100%;
-  /* padding: 10px 0; */
   width: 100%;
-  /* background-color: red; */
 }
 
 .galleryDiv {
@@ -271,10 +264,10 @@
 }
 
 .galleryItem {
-  width: 60%;
+  width: 800px;
   height: 460px;
   border-radius: 5px;
-  box-shadow: 2px 4px 6px #888;
+
   /* z-index: 20; */
   /* background-color: red; */
 }
@@ -314,7 +307,6 @@
 
 .carouselBtn {
   border: none;
-  cursor: pointer;
   margin: 10px;
   font-size: 15px;
   display: flex;
@@ -332,269 +324,4 @@
   background-color: #9187e0;
   color: #fff;
   transition: 0.5s ease;
-}
-
-/* Media query (Responsiveness) --------------------------------------------------*/
-
-@media (max-width: 1440px) {
-  .thumb {
-    width: 100px;
-    height: 90px;
-  }
-
-  .galleryTxt {
-    font-size: 15px;
-  }
-  .relBottom-right {
-    height: 90%;
-  }
-  .galleryItem {
-    height: 95%;
-  }
-}
-
-@media (max-width: 1280px) {
-  .descBottom {
-    font-size: 14px;
-  }
-
-  .galleryItem {
-    height: 90%;
-  }
-
-  .mainCarousel {
-    height: 80%;
-  }
-}
-
-@media (max-width: 1180px) {
-  .thumb {
-    width: 80px;
-    height: 70px;
-  }
-
-  .descTop {
-    font-size: 22px;
-  }
-}
-
-@media (max-width: 1130px) {
-  .relTop-body {
-    width: 90%;
-    /* background-color: red; */
-  }
-  .mainCarousel {
-    height: 80%;
-    /* background-color: red; */
-  }
-}
-
-@media (max-width: 1000px) {
-  .cardCourse {
-    height: 80%;
-  }
-}
-
-@media (max-width: 950px) {
-  .mainRelated {
-    /* background-color: orange; */
-    height: 2000px;
-  }
-  .relatedTitle {
-    height: 5%;
-    /* background-color: orange; */
-  }
-
-  .relatedTitle::before {
-    bottom: 30px;
-    height: 20%;
-    width: 80%;
-  }
-
-  .relatedBody {
-    height: 90%;
-    /* background-color: blue; */
-  }
-  .relatedBottom {
-    height: 72%;
-    flex-direction: column;
-  }
-
-  .relatedTop {
-    height: 25%;
-    /* background-color: red; */
-  }
-
-  .relTop-body {
-    height: 300px;
-  }
-
-  .relBottom-left {
-    width: 100%;
-    height: 50%;
-    /* background-color: yellow; */
-  }
-
-  .relBottom-desc {
-    width: 60%;
-  }
-
-  .descBottom {
-    height: 80%;
-  }
-
-  .descBottom-span {
-    /* background-color: #fff; */
-    padding: 20px 10px;
-  }
-
-  .relBottom-right {
-    width: 100%;
-    height: 50%;
-    /* height:  */
-    /* background-color: red; */
-  }
-
-  .mainCarousel {
-    height: 100%;
-    width: 100%;
-    /* background-color: orange; */
-  }
-
-  .galleryDiv {
-    /* background-color: red; */
-    width: 100%;
-    height: 340px;
-  }
-
-  .thumb {
-    width: 110px;
-    height: 90px;
-  }
-
-  .carouselNav {
-    width: 97%;
-  }
-}
-
-@media (max-width: 850px) {
-  .overlayTxt {
-    font-size: 3vw;
-  }
-}
-
-@media (max-width: 750px) {
-  .relTop-body {
-    height: 250px;
-  }
-
-  .thumb {
-    width: 100px;
-    height: 80px;
-  }
-}
-
-@media (max-width: 660px) {
-  .overlayBtn {
-    padding: 10px 15px;
-    font-size: 15px;
-  }
-  .thumb {
-    width: 80px;
-    height: 60px;
-  }
-
-  .relatedTop {
-    height: 20%;
-    /* background-color: orange; */
-  }
-
-  .relatedBottom {
-    height: 80%;
-  }
-  .galleryTxt {
-    font-size: 2vw;
-  }
-}
-
-@media (max-width: 550px) {
-  .mainRelated {
-    height: 1800px;
-    /* background-color: red; */
-  }
-
-  .relatedTitle {
-    height: 9%;
-    /* background-color: blue; */
-  }
-
-  .relatedBody {
-    height: 90%;
-    /* background-color: brown; */
-  }
-
-  .relatedTop {
-    height: 40%;
-    /* background-color: greenyellow; */
-  }
-
-  .relatedBottom {
-    height: 60%;
-  }
-
-  .relBottom-left {
-    height: 55%;
-    /* background-color: blue; */
-  }
-
-  .relBottom-right {
-    height: 45%;
-    /* background-color: mintcream; */
-  }
-
-  .relTop-body {
-    flex-direction: column;
-    /* height: 200px; */
-    height: 90%;
-    width: 300px;
-  }
-
-  .cardCourse {
-    width: 85%;
-    height: 30%;
-  }
-
-  .carouselNav {
-    display: none;
-  }
-
-  .galleryItem {
-    width: 85%;
-    height: 320px;
-  }
-
-  .relatedTitle {
-    font-size: 25px;
-  }
-
-  .relatedTitle::before {
-    bottom: 50px;
-  }
-  .descTop {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 390px) {
-  .relatedTitle {
-    font-size: 6vw;
-  }
-
-  .galleryTxt {
-    font-size: 10px;
-  }
-
-  .descTop {
-    font-size: 17px;
-  }
 }

@@ -5,7 +5,7 @@
 
 .mainDivFooter {
   height: 320px;
-  background-color: mintcream;
+  background-color: #f1f1f1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

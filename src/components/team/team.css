@@ -1,6 +1,6 @@
 .mainTeam {
-  height: 1100px;
-  background-color: mintcream;
+  height: 1000px;
+  background-color: #f1f1f1;
   position: relative;
 }
 
@@ -25,7 +25,7 @@
   padding: 0 0.35em;
   font-weight: bold;
   line-height: 1.4;
-  height: 25%;
+  height: 20%;
   text-transform: uppercase;
   word-spacing: 10px;
   font-size: 35px;
@@ -43,7 +43,7 @@
   z-index: -1;
   width: 55%;
   height: 20%;
-  bottom: 85px;
+  bottom: 60px;
   opacity: 0.3;
   border-radius: 0px 20px 0px 20px;
   background: #6265fe;
@@ -51,7 +51,7 @@
 
 .teamBody {
   height: 50%;
-  width: 75%;
+  width: 80%;
   margin: auto;
   /* background-color: green; */
   display: flex;
@@ -367,7 +367,7 @@
 
 @media (max-width: 1330px) {
   .mainTeam {
-    height: 1600px;
+    height: 1500px;
   }
 
   .teamBody {
@@ -386,15 +386,9 @@
   }
 }
 
-@media (max-width: 660px) {
-  .mainTeam {
-    height: 2650px;
-  }
-}
-
 @media (max-width: 650px) {
   .mainTeam {
-    height: 2100px;
+    height: 2500px;
   }
 
   .teamTop {
